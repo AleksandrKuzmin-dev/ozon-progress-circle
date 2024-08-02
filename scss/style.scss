@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #EEF3F6;
+}
+
+.progress {
+  width: 540px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  
+  &__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  &__view {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 30px;
+  }
+
+  &__view-circle {
+    max-width: 170px;
+  }
+
+  &__management {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+  }
+
+  &__management-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__management-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__management-item-input-number {
+    width: 50px;
+    height: 25px;
+    border-radius: 12px;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid black;
+    text-align: center;
+
+    appearance: textfield;
+    &::-webkit-outer-spin-button {
+      appearance: none;
+    }
+    &::-webkit-inner-spin-button {
+      appearance: none;
+    }
+  }
+
+  &__management-item-label {
+    font-size: 16px;
+  }
+
+  &__managment-item-checkbox {
+    display: none;
+  }
+
+  &__management-item-checkbox-label-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__management-item-checkbox-label {
+    display: inline-block;
+    position: relative;
+    background-color: #DFE6F0;
+    width: 50px;
+    height: 25px;
+    border-radius: 12px;
+    font-size: 16px;
+    user-select: none;
+    transition: background-color .3s ease-in;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      margin: 2px;
+      border-radius: 50%;
+    }
+  }
+
+  &__managment-item-checkbox:checked + &__management-item-checkbox-label-wrapper &__management-item-checkbox-label{
+    background-color: #005DFF;
+    &::after {
+      left: unset;
+      right: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 568px) {
+  body {
+    padding: 10px;
+  }
+  .progress {
+    width: 100%;
+
+    &__wrapper {
+      grid-template-columns: 1fr;  
+    }
+
+    &__view {
+      justify-content: center;
+      padding: 15px;
+    }
+
+    &__management {
+      justify-content: center;
+      padding: 15px;
+    }
+  }
+}
+

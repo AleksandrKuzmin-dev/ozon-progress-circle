@@ -1,0 +1,38 @@
+@-webkit-keyframes progress-circle-rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes progress-circle-rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.progress-circle {
+  aspect-ratio: 1/1;
+  width: 100%;
+}
+.progress-circle__ring {
+  -webkit-transition: stroke-dasharray 1s;
+  transition: stroke-dasharray 1s;
+  stroke: #005DFF;
+  fill: transparent;
+}
+.progress-circle__ring-background {
+  stroke: #EEF3F6;
+  fill: transparent;
+}
+.progress-circle__animation-rotate {
+  -webkit-animation: rotate 25s linear infinite;
+          animation: rotate 25s linear infinite;
+}/*# sourceMappingURL=progress-circle.css.map */

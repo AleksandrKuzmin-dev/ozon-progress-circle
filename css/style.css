@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-color: #EEF3F6;
+}
+
+.progress {
+  width: 540px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+}
+.progress__title {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.progress__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.progress__view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 30px;
+}
+.progress__view-circle {
+  max-width: 170px;
+}
+.progress__management {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 30px;
+}
+.progress__management-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.progress__management-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.progress__management-item-input-number {
+  width: 50px;
+  height: 25px;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid black;
+  text-align: center;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+.progress__management-item-input-number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+.progress__management-item-input-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+.progress__management-item-label {
+  font-size: 16px;
+}
+.progress__managment-item-checkbox {
+  display: none;
+}
+.progress__management-item-checkbox-label-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.progress__management-item-checkbox-label {
+  display: inline-block;
+  position: relative;
+  background-color: #DFE6F0;
+  width: 50px;
+  height: 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+}
+.progress__management-item-checkbox-label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 2px;
+  border-radius: 50%;
+}
+.progress__managment-item-checkbox:checked + .progress__management-item-checkbox-label-wrapper .progress__management-item-checkbox-label {
+  background-color: #005DFF;
+}
+.progress__managment-item-checkbox:checked + .progress__management-item-checkbox-label-wrapper .progress__management-item-checkbox-label::after {
+  left: unset;
+  right: 0;
+}
+
+@media screen and (max-width: 568px) {
+  body {
+    padding: 10px;
+  }
+  .progress {
+    width: 100%;
+  }
+  .progress__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .progress__view {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 15px;
+  }
+  .progress__management {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */

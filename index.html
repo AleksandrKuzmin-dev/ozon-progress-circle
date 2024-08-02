@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/progress-circle.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Progress Ozon</title>
+  </head>
+  <body>
+    <section class="progress">
+      <h1 class="progress__title">Progress</h1>
+      <div class="progress__wrapper">
+
+        <div class="progress__view">
+          <svg class="progress-circle progress__view-circle" id="progress-circle-1">
+            <circle class="progress-circle__ring-background"/>
+            <circle class="progress-circle__ring"/>
+          </svg>
+        </div>
+
+        <div class="progress__management">
+          <div class="progress__management-items">
+            <div class="progress__management-item">
+              <input class="progress__management-item-input-number" id="progress-value" type="number" min="0" max="100" placeholder="0">
+              <label class="progress__management-item-label" for="progress-value">Value</label>
+            </div>
+
+            <div class="progress__management-item">
+              <input class="progress__managment-item-checkbox" id="progress-animate" type="checkbox">
+              <div class="progress__management-item-checkbox-label-wrapper">
+                <label class="progress__management-item-checkbox-label" for="progress-animate"></label>
+                <label class="progress__management-item-label" for="progress-animate">Animate</label>
+              </div>
+            </div>
+
+            <div class="progress__management-item">
+              <input class="progress__managment-item-checkbox" id="progress-hide" type="checkbox">
+              <div class="progress__management-item-checkbox-label-wrapper">
+                <label class="progress__management-item-checkbox-label" for="progress-hide"></label>
+                <label class="progress__management-item-label" for="progress-hide">Hide</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
