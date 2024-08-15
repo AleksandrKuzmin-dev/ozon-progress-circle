@@ -24,7 +24,7 @@
 ### Подключение к своему проекту:
 #### JavaScript:
 1. Скопируйте файл **progress-circle.js** из папки js и поместите в файлы своего проекта.
-2. Импортируйте функцию **initializeProgressCircle** (либо назовите её по своему, используется export default) из файла **progress-circle.js** в собственный java-script файл (например main.js)
+2. Импортируйте функцию **initializeProgressCircle** (либо назовите её по своему, используется export default) из файла **progress-circle.js** в собственный JavaScript файл (например main.js)
 ```js
 import initializeProgressCircle from "путь к progress-circle.js";
 ```
