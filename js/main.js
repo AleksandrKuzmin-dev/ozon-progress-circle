@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const hideProgressCircleButton = document.querySelector('#progress-hide'); 
 
   const progressCircle = initializeProgressCircle('#progress-circle-1');
-  console.log(progressCircle);
 
   progressValueInput.addEventListener('input', (e) => {
    const value = e.target.value;
